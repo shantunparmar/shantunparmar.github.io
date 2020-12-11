@@ -1,1 +1,536 @@
 
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+	font-family: 'Lato', sans-serif;
+}
+
+.main_banner{
+	background-image: url(../images/web-designs-slider-background.jpg);
+	width: 100%;
+	height: auto;
+	padding: 200px 0 190px;
+	background-position: bottom;
+}
+
+.name_box{
+	border: 1px solid #e1e1e1;
+	padding: 30px 30px;
+	width: 80%;
+	margin: auto;
+	background-color: rgba(0,0,0,0.35);
+}
+
+.name_box p{
+	margin-bottom: 0px;
+	font-size: 2rem;
+	color: #fff;
+}
+
+.name_box h1{
+	font-size: 5rem;
+	color: #fff;
+	margin-bottom: 5px;
+}
+
+.navbar{
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+.navbar-nav .nav-item{
+	padding: 8px 20px;
+}
+
+.nav-item.active{
+	background-color: #222;
+}
+
+section{
+	padding: 80px 0;
+	position: relative;
+}
+
+#about_me{
+	background-color: #00bdbd;
+	position: relative;
+	color: #fff;
+}
+
+#about_me h3, #tech_skills h2, #work_exp h2, #education h2, #projects h2, #contact h2{
+	margin-top: 0px;
+	font-size: 2.5em;
+	font-weight: 200;
+	margin-bottom: 2px;
+}
+
+#tech_skills h2, #work_exp h2, #education h2{
+	color: #ff675f;
+}
+
+.small_intro{
+	margin-bottom: 70px;
+}
+
+.about-left h6{
+	margin-bottom: 20px;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.btn-download{
+	background-color: #474d5d;
+	padding: 16px 30px;
+	border-color: #474d5d;
+}
+
+.btn-download:hover, .btn-download:active, .btn-download:focus, .btn-download:visited,
+.btn-download:not(:disabled):not(.disabled):active{
+	color: #fff;
+	background-color: #3b404c;
+	box-shadow: none;
+	border-color: #3b404c;
+}
+
+.progress {
+  width: 150px;
+  height: 150px;
+  line-height: 150px;
+  background: none;
+  margin: 0 auto;
+  box-shadow: none;
+  position: relative;
+}
+.progress:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 12px solid #ccc;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.progress > span {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+.progress .progress-left {
+  left: 0;
+}
+.progress .progress-bar {
+  width: 100%;
+  height: 100%;
+  background: none;
+  border-width: 12px;
+  border-style: solid;
+  position: absolute;
+  top: 0;
+  border-color: #ff675f;
+}
+.progress .progress-left .progress-bar {
+  left: 100%;
+  border-top-right-radius: 75px;
+  border-bottom-right-radius: 75px;
+  border-left: 0;
+  -webkit-transform-origin: center left;
+  transform-origin: center left;
+}
+.progress .progress-right {
+  right: 0;
+}
+.progress .progress-right .progress-bar {
+  left: -100%;
+  border-top-left-radius: 75px;
+  border-bottom-left-radius: 75px;
+  border-right: 0;
+  -webkit-transform-origin: center right;
+  transform-origin: center right;
+}
+.progress .progress-value {
+  display: flex;
+  border-radius: 50%;
+  font-size: 36px;
+  text-align: center;
+  line-height: 20px;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-weight: 300;
+  width: 100%;
+}
+.progress .progress-value div {
+  margin-top: 0px;
+}
+.progress .progress-value span {
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.progress .progress-value h3 {
+    margin-bottom: -10px;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* This for loop creates the 	necessary css animation names 
+Due to the split circle of progress-left and progress right, we must use the animations on each side. 
+*/
+.progress[data-percentage="10"] .progress-right .progress-bar {
+  animation: loading-1 1.5s linear forwards;
+}
+.progress[data-percentage="10"] .progress-left .progress-bar {
+  animation: 0;
+}
+
+.progress[data-percentage="20"] .progress-right .progress-bar {
+  animation: loading-2 1.5s linear forwards;
+}
+.progress[data-percentage="20"] .progress-left .progress-bar {
+  animation: 0;
+}
+
+.progress[data-percentage="30"] .progress-right .progress-bar {
+  animation: loading-3 1.5s linear forwards;
+}
+.progress[data-percentage="30"] .progress-left .progress-bar {
+  animation: 0;
+}
+
+.progress[data-percentage="40"] .progress-right .progress-bar {
+  animation: loading-4 1.5s linear forwards;
+}
+.progress[data-percentage="40"] .progress-left .progress-bar {
+  animation: 0;
+}
+
+.progress[data-percentage="50"] .progress-right .progress-bar {
+  animation: loading-5 1.5s linear forwards;
+}
+.progress[data-percentage="50"] .progress-left .progress-bar {
+  animation: 0;
+}
+
+.progress[data-percentage="60"] .progress-right .progress-bar {
+  animation: loading-5 1.5s linear forwards;
+}
+.progress[data-percentage="60"] .progress-left .progress-bar {
+  animation: loading-1 1.5s linear forwards 1.5s;
+}
+
+.progress[data-percentage="70"] .progress-right .progress-bar {
+  animation: loading-5 1.5s linear forwards;
+}
+.progress[data-percentage="70"] .progress-left .progress-bar {
+  animation: loading-2 1.5s linear forwards 1.5s;
+}
+
+.progress[data-percentage="80"] .progress-right .progress-bar {
+  animation: loading-5 1.5s linear forwards;
+}
+.progress[data-percentage="80"] .progress-left .progress-bar {
+  animation: loading-3 1.5s linear forwards 1.5s;
+}
+
+.progress[data-percentage="90"] .progress-right .progress-bar {
+  animation: loading-5 1.5s linear forwards;
+}
+.progress[data-percentage="90"] .progress-left .progress-bar {
+  animation: loading-4 1.5s linear forwards 1.5s;
+}
+
+.progress[data-percentage="100"] .progress-right .progress-bar {
+  animation: loading-5 1.5s linear forwards;
+}
+.progress[data-percentage="100"] .progress-left .progress-bar {
+  animation: loading-5 1.5s linear forwards 1.5s;
+}
+
+@keyframes loading-1 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(36);
+    transform: rotate(36deg);
+  }
+}
+@keyframes loading-2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(72);
+    transform: rotate(72deg);
+  }
+}
+@keyframes loading-3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(108);
+    transform: rotate(108deg);
+  }
+}
+@keyframes loading-4 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(144);
+    transform: rotate(144deg);
+  }
+}
+@keyframes loading-5 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(180);
+    transform: rotate(180deg);
+  }
+}
+.progress {
+  margin-bottom: 1em;
+}
+
+#tech_skills{
+	background-color: #f6f6f6;
+}
+
+.workYear {
+    font-size: 17px;
+    color: #fff;
+    background: #ff675f;
+    text-align: center;
+    width: 120px;
+    height: 120px;
+    padding: 40px 0 40px 0;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.workDetails .rightArea {
+    border-left: solid 1px #eaeaea;
+    padding-bottom: 47px;
+}
+
+.arrowpart {
+    float: left;
+    width: 15px;
+    height: 50px;
+    background: url(../images/arrow-left.png) no-repeat 0 23px;
+}
+
+.exCon {
+    width: auto;
+    background: #f3f3f3;
+    border-bottom: solid 4px #eeeeee;
+    padding: 22px 47px 6px 47px;
+    margin-left: 15px;
+    text-align: left;
+}
+
+#work_exp h4 {
+    font-weight: 700;
+}
+
+.exCon h4 {
+    color: #474d5d;
+    padding-bottom: 3px;
+}
+
+.exCon h5 {
+    color: #474d5d;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.exCon p {
+    color: #84868d;
+    line-height: 21px;
+}
+
+@media only screen and (min-width: 1200px){
+	.workYear {
+	    width: 140px;
+	    height: 140px;
+	    padding-top: 50px;
+	}
+}
+
+#education{
+	background-color: #efefef;
+}
+
+#education .exCon{
+	background: #fafafa;
+    border-bottom: solid 4px #e8e7e7;
+}
+
+#education .arrowpart {
+    background: url(../images/arrow-left-light.png) no-repeat 0 23px;
+}
+
+#education .workYear{
+	background: #00bdbd;
+}
+
+#projects{
+	background-color: #00bdbd;
+	color: #fff;
+}
+
+.project_inner{
+	display: block;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.project_image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.project_overlay {
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+#projects .project_inner:hover .project_overlay{
+	visibility: visible;
+    left: 0px;
+    bottom: 0px;
+    background: rgba(0, 0, 0, 0.8);
+    transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+}
+
+.project_overlay .btn{
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    background-color: #f36072;
+    border-color: #f36072;
+    border-radius: 0px;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 10px 20px;
+    width: 60%;
+}
+
+.project_overlay .btn-primary:hover,
+.project_overlay .btn-primary:focus,
+.project_overlay .btn-primary:active,
+.project_overlay .btn-primary:visited {
+    color: #fff;
+    background-color: #da4c5d;
+    border-color: #da4c5d;
+}
+
+#contact{
+	background: #474d5d;
+	color: #fff;
+}
+
+#contact h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.contact_details p, .contact_details p a {
+    color: #a7a7a7;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.contact_details p i {
+    margin-right: 10px;
+}
+
+#contact .form-control{
+	color: #ddd;
+    background-color: #585f73;
+    border: 1px solid #656c82;
+    border-radius: 0px;
+}
+
+#contact .form-control:focus, #contact .form-control:active{
+	outline: 0;
+	box-shadow: none;
+}
+
+#contact .btn-danger {
+    font-style: oblique;
+    padding: 10px 30px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    border-radius: 0px;
+}
+
+.clearfix{
+	clear: both;
+}
+
+footer{
+	background-color: #00bdbd;
+	color: #fff;
+	padding: 20px 0;
+}
+
+footer ul{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+footer ul li{
+	border: 1px solid #e1e1e1;
+	width: 40px;
+	height: 40px;
+	border-radius: 100%;
+	line-height: 40px;
+	text-align: center;
+	margin-right: 10px;
+}
+
+footer ul li i{
+	font-size: 20px !important;
+}
+
+footer ul li:hover i{
+	color: #ccc;
+}
+
+footer ul li:hover{
+	background-color: #0a9f9f;
+}
