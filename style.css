@@ -8,7 +8,7 @@ body{
 }
 
 .main_banner{
-	background-image: url(http://coodingdessign.com/portfolio/template2/images/web-designs-slider-background.jpg);
+	background-image: url('http://coodingdessign.com/portfolio/template2/images/web-designs-slider-background.jpg');
 	width: 100%;
 	height: auto;
 	padding: 200px 0 190px;
